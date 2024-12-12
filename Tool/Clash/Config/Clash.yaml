@@ -128,7 +128,14 @@ proxy-groups:
   - {name: 境外下载, type: select, include-all-providers: true, filter: *FilterAll, proxies: [DIRECT, 延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: AI, type: select, include-all-providers: true, filter: *FilterAll, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: TikTok, type: select, include-all-providers: true, filter: *FilterAll, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
-  - {name: Telegram, type: select, proxies: [香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Telegram, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: YouTube, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Google, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Epic, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: GitHub, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Twitter, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Facebook, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Instagram, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: App Store, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Apple账户, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: TestFlight, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
@@ -295,6 +302,35 @@ rule-providers:
     path: './rules/ESET_China.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/ESET_China.yaml'
 
+  YouTube:
+    <<: *RuleProviders
+    path: './rules/YouTube.yaml'
+    url: 'https://rule.kelee.one/Clash/YouTube.yaml'
+
+  GitHub:
+    <<: *RuleProviders
+    path: './rules/GitHub.yaml'
+    url: 'https://rule.kelee.one/Clash/GitHub.yaml'
+
+  Twitter:
+    <<: *RuleProviders
+    path: './rules/Twitter.yaml'
+    url: 'https://rule.kelee.one/Clash/Twitter.yaml'
+
+  Facebook:
+    <<: *RuleProviders
+    path: './rules/YouTube.yaml'
+    url: 'https://rule.kelee.one/Clash/Facebook.yaml'
+
+  Instagram:
+    <<: *RuleProviders
+    path: './rules/YouTube.yaml'
+    url: 'https://rule.kelee.one/Clash/Instagram.yaml'
+
+  Epic:
+    <<: *RuleProviders
+    path: './rules/Epic.yaml'
+    url: 'https://rule.kelee.one/Clash/Epic.yaml'
 # 规则指向
 rules:
   - RULE-SET, Lan, DIRECT
@@ -316,8 +352,14 @@ rules:
   - RULE-SET, AppStore, App Store
   - RULE-SET, 1Password, 1Password
   - RULE-SET, Microsoft, Microsoft
-  - RULE-SET, Google, 兜底策略
   - RULE-SET, Telegram, Telegram
   - RULE-SET, ESET_China, DIRECT
+  - RULE-SET, YouTube, YouTube
+  - RULE-SET, GitHub, GitHub
+  - RULE-SET, Google, Google
+  - RULE-SET, Twitter, Twitter
+  - RULE-SET, Facebook, Facebook
+  - RULE-SET, Instagram, Instagram
+  - RULE-SET, Epic, Epic
   - GEOIP, CN, DIRECT
-  - MATCH, 兜底策略  
+  - MATCH, 兜底策略
