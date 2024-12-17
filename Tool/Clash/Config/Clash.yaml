@@ -131,11 +131,15 @@ proxy-groups:
   - {name: Telegram, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: YouTube, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Google, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
-  - {name: Epic, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: GitHub, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Twitter, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Facebook, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Instagram, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Steam, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Ubisoft, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Epic, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Rockstar, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Electron, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: App Store, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Apple账户, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: TestFlight, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
@@ -327,10 +331,25 @@ rule-providers:
     path: './rules/YouTube.yaml'
     url: 'https://rule.kelee.one/Clash/Instagram.yaml'
 
+  Ubisoft:
+    <<: *RuleProviders
+    path: './rules/Ubisoft.yaml'
+    url: 'https://rule.kelee.one/Clash/Ubisoft.yaml'
+
   Epic:
     <<: *RuleProviders
     path: './rules/Epic.yaml'
     url: 'https://rule.kelee.one/Clash/Epic.yaml'
+
+  Rockstar:
+    <<: *RuleProviders
+    path: './rules/Rockstar.yaml'
+    url: 'https://rule.kelee.one/Clash/Rockstar.yaml'    
+
+  Electron:
+    <<: *RuleProviders
+    path: './rules/Electron.yaml'
+    url: 'https://rule.kelee.one/Clash/Electron.yaml'
 # 规则指向
 rules:
   - RULE-SET, Lan, DIRECT
@@ -340,7 +359,7 @@ rules:
   - RULE-SET, InternationalDownloadCDN, 境外下载
   - RULE-SET, AI, AI
   - RULE-SET, TikTok, TikTok
-  - RULE-SET, Steam, 兜底策略
+  - RULE-SET, Steam, Steam
   - RULE-SET, Game, 游戏选择
   - RULE-SET, Netflix, Netflix
   - RULE-SET, Emby, Emby
@@ -360,6 +379,9 @@ rules:
   - RULE-SET, Twitter, Twitter
   - RULE-SET, Facebook, Facebook
   - RULE-SET, Instagram, Instagram
+  - RULE-SET, Ubisoft, Ubisoft
   - RULE-SET, Epic, Epic
+  - RULE-SET, Rockstar, Rockstar
+  - RULE-SET, Electron, Electron
   - GEOIP, CN, DIRECT
   - MATCH, 兜底策略
