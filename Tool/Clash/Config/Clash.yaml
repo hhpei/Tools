@@ -85,6 +85,24 @@ NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, 
 
 # 锚点 - 节点订阅
 proxy-providers: 
+  金坷垃(圈X):
+    url: 'https://j.sub12345.org/link/SxVGkQ4bQ48QRfDn?list=quantumultx'
+    <<: *NodeParam
+    path: './proxy_providers/金坷垃(圈X).yaml'
+    override:
+      additional-prefix: "[金坷垃(圈X)] " # 为订阅节点添加机场名称前缀
+  金坷垃(Clash):
+    url: 'https://j.sub12345.org/link/SxVGkQ4bQ48QRfDn?clash=1'
+    <<: *NodeParam
+    path: './proxy_providers/金坷垃(Clash).yaml'
+    override:
+      additional-prefix: "[金坷垃(Clash)] " # 为订阅节点添加机场名称前缀
+  赔钱机场:
+    url: 'https://pqjc.site/api/v1/client/subscribe?token=1bdf0dd649e65a4012e652b97c43ec9f'
+    <<: *NodeParam
+    path: './proxy_providers/赔钱机场.yaml'
+    override:
+      additional-prefix: "[赔钱机场] " # 为订阅节点添加机场名称前缀
   机场名称1:
     url: '机场1的订阅URL'
     <<: *NodeParam
