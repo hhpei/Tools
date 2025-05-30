@@ -116,20 +116,20 @@ proxy-providers:
       additional-prefix: "[机场名称3] " # 为订阅节点添加机场名称前缀
 
 # 锚点 - 节点筛选组
-FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterTW: &FilterTW '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterKR: &FilterKR '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterUK: &FilterUK '^(?=.*((?i)🇬🇧|英国|伦敦|(\b(UK|United Kingdom)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterFR: &FilterFR '^(?=.*((?i)🇫🇷|法国|(\b(FR|France)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterDE: &FilterDE '^(?=.*((?i)🇩🇪|德国|(\b(DE|Germany)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香|港|香港|香江|香岛|湾仔|港仔|九龙|铜锣湾|旺角|(\b(HK|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterTW: &FilterTW '^(?=.*((?i)🇹🇼|台|台北|新北|桃园|台中|台南|高雄|基隆|新竹|嘉义|苗栗|彰化|南投|云林|屏东|台东|花莲|宜兰|澎湖|金门|连江|台湾|(\b(TW|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|名古屋|福冈|仙台|京都|(\b(JP|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterKR: &FilterKR '^(?=.*((?i)🇰🇷|韩国|韓|首尔南韩|南朝鲜|高丽|大韩民国|首尔|世宗|济州市|水原|釜山|大邱|仁川|光州|大田|蔚山|(\b(KR|Korea)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|新|狮|獅|坡|新加坡|星|星加坡|星洲|(\b(SG|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美|美国|美利坚合众国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|华盛顿|内华达|蒙大纳|怀俄明州|菲尼克斯|阿尔伯克基|丹佛|(\b(US|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterUK: &FilterUK '^(?=.*((?i)🇬🇧|英|英国|伦敦|(\b(UK|United Kingdom)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterFR: &FilterFR '^(?=.*((?i)🇫🇷|法|法国|(\b(FR|France)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterDE: &FilterDE '^(?=.*((?i)🇩🇪|德|德国|(\b(DE|Germany)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 FilterGame: &FilterGame '^(?=.*((?i)游戏|🎮|(\b(GAME)(\d+)?\b)))(?!.*((?i)回国|校园)).*$'
 FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$'
 
 # 策略组参数锚点
-# 锚点 - 延迟最低参数 [每 6 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+# 锚点 - 时延优选参数 [每 6 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
 UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://www.google.com/blank.html', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
 # 锚点 - 故障转移参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
 FallBack: &FallBack {type: fallback, interval: 6, lazy: true, url: 'http://www.google.com/blank.html', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
@@ -152,6 +152,7 @@ proxy-groups:
   - {name: Twitter, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Facebook, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Instagram, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Threads, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Steam, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Ubisoft, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Epic, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
@@ -162,9 +163,9 @@ proxy-groups:
   - {name: TestFlight, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: 1Password, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
   - {name: Microsoft, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
-  - {name: Netflix, type: select, proxies: [香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
-  - {name: Emby, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
-  - {name: 兜底策略, type: select, proxies: [香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点, DIRECT]}
+  - {name: Netflix, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: Emby, type: select, proxies: [延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
+  - {name: 兜底策略, type: select, proxies: [DIRECT, 延迟最低, 香港节点, 台湾节点, 日本节点, 韩国节点, 新加坡节点, 美国节点, 英国节点, 法国节点, 德国节点]}
 
   - {name: 延迟最低, type: select, proxies: [⏱全部延迟最低节点组]}
   - {name: 香港节点, type: select, proxies: [⏱香港延迟最低节点组, 🚥香港故障转移节点组, 🎛香港负载均衡节点组]}
@@ -323,11 +324,15 @@ rule-providers:
     path: './rules/ESET_China.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/ESET_China.yaml'
 
+  Threads:
+    <<: *RuleProviders
+    path: './rules/Threads.yaml'
+    url: 'https://rule.kelee.one/Clash/Threads.yaml'
   YouTube:
     <<: *RuleProviders
     path: './rules/YouTube.yaml'
     url: 'https://rule.kelee.one/Clash/YouTube.yaml'
-
+    
   GitHub:
     <<: *RuleProviders
     path: './rules/GitHub.yaml'
@@ -390,6 +395,7 @@ rules:
   - RULE-SET, Microsoft, Microsoft
   - RULE-SET, Telegram, Telegram
   - RULE-SET, ESET_China, DIRECT
+  - RULE-SET, Threads, Threads
   - RULE-SET, YouTube, YouTube
   - RULE-SET, GitHub, GitHub
   - RULE-SET, Google, Google
