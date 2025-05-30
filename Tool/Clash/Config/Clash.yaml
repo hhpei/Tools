@@ -1,6 +1,6 @@
 # mihomo 配置
 # 日期：2024-12-06 10:50:50
-# 配置作者：https://t.me/iKeLee
+# 配置作者：@Hhpios 
 # 适用版本：所有使用 mihomo 核心的程序
 port: 7890
 socks-port: 7891
@@ -30,8 +30,8 @@ external-controller: 0.0.0.0:9090
 geox-url:
   # geoip: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat'
   # geosite: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat'
-  mmdb: 'https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb'
-  asn: 'https://gitlab.com/Loon0x00/loon_data/-/raw/main/geo/GeoLite2-ASN.mmdb'
+  mmdb: 'https://geodata.kelee.one/Country-Masaiki.mmdb'
+  asn: 'https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb'
 
 profile:
   store-selected: true
@@ -64,10 +64,21 @@ tun:
   auto-route: true
   auto-detect-interface: true
 
+# P2P下载端口
+listeners:
+- name: socks5-in-1
+  type: socks
+  port: 10808
+  listen: 0.0.0.0
+  udp: true
+  users: []
+  proxy: DIRECT
+
 dns:
   enable: true
+  prefer-h3: true
   listen: 0.0.0.0:1053
-  ipv6: true
+  ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter:
@@ -77,32 +88,14 @@ dns:
     - 223.5.5.5
     - 223.6.6.6
   nameserver:
-    - https://223.5.5.5/dns-query#h3=true
-    - https://223.6.6.6/dns-query#h3=true
+    - https://223.5.5.5/dns-query
+    - https://223.6.6.6/dns-query
 
 # 锚点 - 节点订阅的参数 [每小时更新一次订阅节点，每 6 秒一次健康检查]
 NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, url: 'http://www.google.com/blank.html', interval: 6}}
 
 # 锚点 - 节点订阅
 proxy-providers: 
-  金坷垃(圈X):
-    url: 'https://j.sub12345.org/link/SxVGkQ4bQ48QRfDn?list=quantumultx'
-    <<: *NodeParam
-    path: './proxy_providers/金坷垃(圈X).yaml'
-    override:
-      additional-prefix: "[金坷垃(圈X)] " # 为订阅节点添加机场名称前缀
-  金坷垃(Clash):
-    url: 'https://j.sub12345.org/link/SxVGkQ4bQ48QRfDn?clash=1'
-    <<: *NodeParam
-    path: './proxy_providers/金坷垃(Clash).yaml'
-    override:
-      additional-prefix: "[金坷垃(Clash)] " # 为订阅节点添加机场名称前缀
-  赔钱机场:
-    url: 'https://pqjc.site/api/v1/client/subscribe?token=1bdf0dd649e65a4012e652b97c43ec9f'
-    <<: *NodeParam
-    path: './proxy_providers/赔钱机场.yaml'
-    override:
-      additional-prefix: "[赔钱机场] " # 为订阅节点添加机场名称前缀
   机场名称1:
     url: '机场1的订阅URL'
     <<: *NodeParam
@@ -115,6 +108,12 @@ proxy-providers:
     path: './proxy_providers/机场名称2.yaml'
     override:
       additional-prefix: "[机场名称2] " # 为订阅节点添加机场名称前缀
+  机场名称3:
+    url: '机场3的订阅URL'
+    <<: *NodeParam
+    path: './proxy_providers/机场名称3.yaml'
+    override:
+      additional-prefix: "[机场名称3] " # 为订阅节点添加机场名称前缀
 
 # 锚点 - 节点筛选组
 FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
