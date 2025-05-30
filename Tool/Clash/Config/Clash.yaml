@@ -1,7 +1,7 @@
 # mihomo 配置
 # 日期：2025年5月30日20:28:48
 # 配置作者：@Hhpios 
-# 配置地址：
+# 配置地址：https://raw.githubusercontent.com/hhpei/Tools/refs/heads/main/Tool/Clash/Config/Clash.yaml
 # 适用版本：所有使用 mihomo 核心的程序
 port: 7890
 socks-port: 7891
