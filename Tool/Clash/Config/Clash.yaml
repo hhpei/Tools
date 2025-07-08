@@ -1,8 +1,5 @@
 # mihomo 配置
-# 日期：2025年5月30日20:28:48
-// @Author            @Hhpios    
-// @TgChannel         https://t.me/Hhpios6    
-# 配置作者：@Hhpios 
+# 日期：2025年7月8日18:36:59
 # 配置地址：https://raw.githubusercontent.com/hhpei/Tools/refs/heads/main/Tool/Clash/Config/Clash.yaml
 # 适用版本：所有使用 mihomo 核心的程序
 port: 7890
@@ -20,6 +17,7 @@ tcp-concurrent: true
 find-process-mode: strict
 global-client-fingerprint: chrome
 
+
 allow-lan: true
 mode: rule
 log-level: info
@@ -30,11 +28,13 @@ external-controller: 0.0.0.0:9090
 # external-ui: ui
 # external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
 
+
 geox-url:
   # geoip: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat'
   # geosite: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat'
   mmdb: 'https://geodata.kelee.one/Country-Masaiki.mmdb'
   asn: 'https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb'
+
 
 profile:
   store-selected: true
